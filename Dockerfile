@@ -62,9 +62,11 @@ EXPOSE 80
 WORKDIR /
 RUN ln -s /var/www/lychee/uploads uploads 
 RUN ln -s /var/www/lychee/data data
+RUN ln -s /var/lib/mysql mysql
 
 VOLUME /uploads
 VOLUME /data
+VOLUME /mysql
 
 # ------------------------------------------------------------------------------
 # Add supervisord conf
